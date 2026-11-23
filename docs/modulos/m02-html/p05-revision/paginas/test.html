@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="Content-Security-Policy"
+      content="default-src 'self';
+               script-src 'self';
+               style-src 'self' https://fonts.googleapis.com;
+               font-src https://fonts.gstatic.com;
+               img-src 'self';
+               media-src 'self';
+               object-src 'self';
+               frame-src 'self' https://www.openstreetmap.org;
+               base-uri 'self';
+               form-action 'self'">
+  <meta name="description" content="Página auxiliar para comprobar rutas relativas con ../ en el sitio de la Clínica Veterinaria ConSentidos.">
+  <meta name="author" content="Fernando Bethancourt">
+  <title>Página de prueba — Clínica Veterinaria ConSentidos</title>
+  <link rel="icon" href="../assets/img/logo-consentidos.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/consentidos.css">
+</head>
+<body>
+  <header>
+    <hgroup>
+      <h1>Página de prueba</h1>
+      <p>Clínica Veterinaria ConSentidos</p>
+    </hgroup>
+  </header>
+
+  <main id="contenido">
+    <p>Esta página auxiliar sirve para comprobar que las rutas que suben un nivel con <code>../</code> cargan los estilos, las imágenes y los enlaces sin errores.</p>
+    <p>Más adelante también se cargará dentro de la guía de componentes mediante un <code>&lt;iframe&gt;</code> para probar contenido incrustado del propio sitio.</p>
+
+    <figure>
+      <img src="../assets/img/luna.svg"
+           alt="Ilustración de Luna, una gata gris atigrada, sentada"
+           width="200" height="200" loading="lazy">
+      <figcaption>La imagen también se alcanza subiendo un nivel.</figcaption>
+    </figure>
+
+    <p><a href="../index.html">Volver al inicio del sitio</a></p>
+  </main>
+</body>
+</html>

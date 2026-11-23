@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy"
+      content="default-src 'self';
+               script-src 'self';
+               style-src 'self' https://fonts.googleapis.com;
+               font-src https://fonts.gstatic.com;
+               img-src 'self';
+               media-src 'self';
+               object-src 'self';
+               frame-src 'self' https://www.openstreetmap.org;
+               base-uri 'self';
+               form-action 'self'">
+    <meta name="description" content="Servicios dClínica Veterinaria ConSentidos : consulta, vacunacion, desparasitación y cirugia .">
+    <meta name="author" content="Fernando Bethancourt">
+    <title>Servicios - Clínica Veterinaria ConSentidos</title>
+    <link rel="icon" href="assets/img/logo-consentidos.svg" type="image/svg+xml"> 
+    <link rel="stylesheet" href="assets/css/consentidos.css"> 
+    </head>
+    <body>
+ <header>
+    <div>
+      <img src="assets/img/logo-consentidos.svg" alt="" width="48" height="48">
+      <hgroup>
+        <h1>Guia de componentes</h1>
+        <p>Clínica Veterinaria ConSentidos</p>
+      </hgroup>
+    </div>
+    <p>Estudiante: <strong>Fernando Bethancourt</strong> · Grupo: <strong>4gs122</strong> · Ficha: <strong>05</strong></p>
+  </header>
+   <nav aria-label="Navegación del sitio">
+    <h2>El sitio</h2>
+    <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="componentes.html">Guia de Componentes</a></li>
+        <li><a href="paginas/test.html">Páginas de prueba</a></li>
+    </ul>
+</nav>
+<main id="inicio">
+  <section id="indice-componentes">
+    <h2>Contenido de la guía</h2>
+    <ul>
+      <li><a href="#sec-tablas">Tablas de tarifas y horarios</a></li>
+      <li><a href="#sec-medios">Imágenes, audio y video</a></li>
+      <li><a href="#sec-incrustado">Contenido incrustado (iframe)</a></li>
+      <li><a href="#sec-interactivos">Elementos interactivos</a></li>
+    </ul>
+  </section>
+
+  <section id="sec-tablas">
+    <h2>Tablas de tarifas y horarios</h2>
+    <table>
+      <caption>Tarifas referenciales de atención clínica</caption>
+      <thead>
+        <tr>
+          <th scope="col">Servicio</th>
+          <th scope="col">Especie</th>
+          <th scope="col">Duración aproximada</th>
+          <th scope="col">Costo (USD)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Consulta general</th>
+          <td>Perros y gatos</td>
+          <td>30 min</td>
+          <td>25.00</td>
+        </tr>
+        <tr>
+          <th scope="row">Vacuna antirrábica</th>
+          <td>Perros y gatos</td>
+          <td>15 min</td>
+          <td>15.00</td>
+        </tr>
+        <tr>
+          <th scope="row">Desparasitación interna</th>
+          <td>Según peso</td>
+          <td>15 min</td>
+          <td>12.00</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="4">Precios sujetos a evaluación clínica previa.</td>
+        </tr>
+      </tfoot>
+    </table>
+  </section>
+<section id="sec-medios">
+    <h2>Imágenes, audio y video</h2>
+
+    <figure>
+      <img src="assets/img/luna.svg"
+           alt="Ilustración de Luna, gata gris atigrada, sentada"
+           width="220" height="220" loading="lazy">
+      <figcaption>Paciente modelo de la clínica: Luna.</figcaption>
+    </figure>
+
+    <figure>
+      <figcaption>Recomendaciones de audio para el cuidado en casa</figcaption>
+      <audio controls preload="metadata">
+        <source src="assets/media/consejos-veterinarios.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+      </audio>
+    </figure>
+
+    <figure>
+      <figcaption>Video informativo sobre consulta preventiva</figcaption>
+      <video controls width="480" preload="metadata" poster="assets/img/logo-consentidos.svg">
+        <source src="assets/media/consulta-preventiva.mp4" type="video/mp4">
+        <track src="assets/media/subtitulos-es.vtt" kind="subtitles" srclang="es" label="Español" default>
+        Tu navegador no soporta la reproducción de video HTML5.
+      </video>
+    </figure>
+  </section>
+
+  <section id="sec-incrustado">
+    <h2>Contenido incrustado</h2>
+    <p>Vista previa de la página auxiliar dentro de un marco incrustado:</p>
+    <iframe src="paginas/test.html"
+            title="Vista previa de la página de prueba de ConSentidos"
+            width="600" height="320" loading="lazy">
+    </iframe>
+  </section>
+
+  <section id="sec-interactivos">
+    <h2>Elementos interactivos e indicadores</h2>
+    <details>
+      <summary>¿Qué debo llevar a la primera consulta?</summary>
+      <p>Trae el carné de vacunación si lo tienes, una muestra reciente si el médico la solicitó y correa o transportadora segura.</p>
+    </details>
+
+    <p>
+      <label for="progreso-vacunas">Meta de campaña de vacunación anual:</label>
+      <progress id="progreso-vacunas" value="75" max="100">75%</progress>
+    </p>
+
+    <p>
+      <label for="nivel-ocupacion">Ocupación actual de agenda diaria:</label>
+      <meter id="nivel-ocupacion" min="0" max="100" low="30" high="80" optimum="50" value="65">65%</meter>
+    </p>
+  </section>
+</main>
+        <footer>
+            <p>Clínica Veterinaria ConSentidos . Santiago de Veraguas, Panamá</p>
+            <p>Proyecto del curso Desarrollo de Software V , Universidad Tecnologica de Panamá, Centro Reginal de Veraguas</p>
+            </footer> 
+    </body>
+    </html>    
